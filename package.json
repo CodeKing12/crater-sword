@@ -13,6 +13,8 @@
 		"@solidjs/meta": "^0.29.4",
 		"@solidjs/router": "^0.15.0",
 		"@solidjs/start": "^1.1.0",
+		"better-sqlite3": "^11.10.0",
+		"lucide-solid": "^0.511.0",
 		"solid-js": "^1.9.5",
 		"vinxi": "^0.5.3"
 	},
@@ -21,6 +23,7 @@
 	},
 	"devDependencies": {
 		"@pandacss/dev": "^0.53.7",
-		"@park-ui/panda-preset": "^0.43.1"
+		"@park-ui/panda-preset": "^0.43.1",
+		"vite-tsconfig-paths": "^5.1.4"
 	}
 }

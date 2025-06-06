@@ -1,41 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
 @layer reset, base, tokens, recipes, utilities;
 
 body {
-  font-family: Gordita, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* font-family: Gordita, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+   font-family: "Funnel Display", sans-serif;
 }
 
-a {
-  margin-right: 1rem;
+.strongs-ref {
+  cursor: pointer;
+  text-decoration: underline;
+  margin: 0 0.1em;
+  color: #0D74CE
 }
 
-main {
-  text-align: center;
-  padding: 1em;
-  margin: 0 auto;
-}
 
-h1 {
-  color: #335d92;
-  text-transform: uppercase;
-  font-size: 4rem;
-  font-weight: 100;
-  line-height: 1.1;
-  margin: 4rem auto;
-  max-width: 14rem;
-}
 
-p {
-  max-width: 14rem;
-  margin: 2rem auto;
-  line-height: 1.35;
-}
 
-@media (min-width: 480px) {
-  h1 {
-    max-width: none;
-  }
+/* Should conver to use as pandacss props */
+.verse-container {
+		/* font-family: 'Times New Roman', serif; */
+		line-height: 1.6;
+		font-size: 18px;
+	}
 
-  p {
-    max-width: none;
-  }
-}
+	.translation-italic {
+		font-style: italic;
+		color: #555;
+	}
+
+	/* .strongs-ref {
+		cursor: pointer;
+		color: #1e90ff;
+		font-weight: bold;
+		font-size: 0.85em;
+		margin-left: 2px;
+		vertical-align: super;
+	} */
+
+	/* Popup styling */
+
+	.strongs-section {
+		margin-bottom: 12px;
+		padding-bottom: 12px;
+		border-bottom: 1px solid #eee;
+	}
+
+	.section-label {
+		font-weight: bold;
+		color: #2c3e50;
+		display: block;
+		margin-bottom: 4px;
+		font-size: 18px;
+	}
+
+	/* Specific section styles */
+	.origin-section .original-text {
+		/* font-family: 'Times New Roman', serif; */
+		font-size: 1.8em;
+		color: #8e44ad;
+	}
+
+	.translit-section .transliteration {
+		font-family: monospace;
+		color: #c0392b;
+		font-size: 1.2em;
+	}
+
+	.phonetics-section .phonetic {
+		color: #16a085;
+		font-style: italic;
+	}
+
+	.definition-section ol {
+		padding-left: 20px;
+		margin-top: 8px;
+	}
+
+	.definition-section li {
+		margin-bottom: 6px;
+	}
+
+	.etymology-section .origin {
+		color: #2980b9;
+	}
+
+	.lexicon-section .entry {
+		font-family: monospace;
+		color: #7f8c8d;
+	}
+
+	.grammar-section .part-of-speech {
+		color: #e74c3c;
+		text-transform: uppercase;
+		font-size: 0.9em;
+		letter-spacing: 0.5px;
+	}
+
+	.strongs-def-section .strongs-def {
+		font-style: italic;
+    font-weight: 500;
+		color: #3E9B4F;
+		border-left: 3px solid #3E9B4F;
+		padding-left: 10px;
+	}
+
+
+
+  .verse-container i {
+		font-style: italic; /* Styling for italicized text */
+	}
+
+    ol {
+        list-style-type: decimal;
+        padding-left: 20px;
+    }
+    
+    ol[type="a"] {
+        list-style-type: lower-alpha;
+        padding-left: 20px;
+    }
