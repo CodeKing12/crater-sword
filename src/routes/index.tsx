@@ -110,7 +110,7 @@ export default function Home() {
 	const filterResults = createMemo(() => {
 		return bible().filter((row) => row.book === scriptureFilter.book.order && row.chapter === scriptureFilter.chapter);
 	});
-	const strongsData = () => parseStrongsDefinition(dictionary().find((row) => row.word === strongsWord())?.data);
+	const strongsData = () => parseStrongsDefinition(strongsWord(), dictionary().find((row) => row.word === strongsWord())?.data);
 
 	// createEffect(() => {
 	// 	console.log(
@@ -120,15 +120,29 @@ export default function Home() {
 	// 	);
 	// });
 	onMount(() => {
-		document.querySelectorAll(".strongs-ref").forEach((ref) => {
-			ref.addEventListener("click", () => {
-				setStrongsWord((ref as HTMLElement).dataset.ref ?? "");
-			});
-			ref.addEventListener("dblclick", () => {
-				const projectionInfo = { scripture: currentScripture, strongs: strongsData() };
-				broadcast.postMessage(projectionInfo);
-			});
+		document.addEventListener("click", (e) => {
+			const target = (e.target as HTMLElement | null)?.closest(".strongs-ref") as HTMLElement; // Or any other selector.
+			if (target) {
+				if (e.detail === 1) {
+					setStrongsWord(target.dataset.ref ?? "");
+				} else if (e.detail === 2) {
+					const projectionInfo = { scripture: currentScripture(), strongs: strongsData() };
+					broadcast.postMessage(projectionInfo);
+					localStorage.setItem("projection-info", JSON.stringify(projectionInfo));
+				}
+				// Do something with `target`.
+			}
 		});
+		// document.querySelectorAll(".strongs-ref").forEach((ref) => {
+		// 	ref.addEventListener("click", () => {
+		// 		setStrongsWord((ref as HTMLElement).dataset.ref ?? "");
+		// 	});
+		// 	ref.addEventListener("dblclick", () => {
+		// 		const projectionInfo = { scripture: currentScripture(), strongs: strongsData() };
+		// 		broadcast.postMessage(projectionInfo);
+		// 		localStorage.setItem("projection-info", JSON.stringify(projectionInfo));
+		// 	});
+		// });
 	});
 
 	return (

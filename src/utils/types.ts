@@ -12,6 +12,7 @@ export interface StrongLiteRow {
 }
 
 export interface StrongsDefinition {
+	word: string;
 	original: string;
 	transliteration: string;
 	phonetic: string;

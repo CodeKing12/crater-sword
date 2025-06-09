@@ -1,34 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
 @layer reset, base, tokens, recipes, utilities;
 
 body {
-  /* font-family: Gordita, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
-   font-family: "Funnel Display", sans-serif;
+	/* font-family: Gordita, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+	font-family: "Funnel Display", sans-serif;
 }
 
 .strongs-ref {
-  cursor: pointer;
-  text-decoration: underline;
-  margin: 0 0.1em;
-  color: #0D74CE
+	cursor: pointer;
+	text-decoration: underline;
+	margin: 0 0.1em;
+	color: #0d74ce;
 }
-
-
-
 
 /* Should conver to use as pandacss props */
 .verse-container {
-		/* font-family: 'Times New Roman', serif; */
-		line-height: 1.6;
-		font-size: 18px;
-	}
+	/* font-family: 'Times New Roman', serif; */
+	line-height: 1.6;
+	font-size: 18px;
+}
 
-	.translation-italic {
-		font-style: italic;
-		color: #555;
-	}
+.translation-italic {
+	font-style: italic;
+	color: #555;
+}
 
-	/* .strongs-ref {
+/* .strongs-ref {
 		cursor: pointer;
 		color: #1e90ff;
 		font-weight: bold;
@@ -37,85 +34,122 @@ body {
 		vertical-align: super;
 	} */
 
-	/* Popup styling */
+/* Popup styling */
 
-	.strongs-section {
-		margin-bottom: 12px;
-		padding-bottom: 12px;
-		border-bottom: 1px solid #eee;
-	}
+.strongs-section {
+	margin-bottom: 12px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid #eee;
+}
 
-	.section-label {
-		font-weight: bold;
-		color: #2c3e50;
-		display: block;
-		margin-bottom: 4px;
-		font-size: 18px;
-	}
+.section-label {
+	font-weight: bold;
+	color: #2c3e50;
+	display: block;
+	margin-bottom: 4px;
+	font-size: 18px;
+}
 
-	/* Specific section styles */
-	.origin-section .original-text {
-		/* font-family: 'Times New Roman', serif; */
-		font-size: 1.8em;
-		color: #8e44ad;
-	}
+/* Specific section styles */
+.origin-section .original-text {
+	/* font-family: 'Times New Roman', serif; */
+	font-size: 1.8em;
+	color: #8e44ad;
+}
 
-	.translit-section .transliteration {
-		font-family: monospace;
-		color: #c0392b;
-		font-size: 1.2em;
-	}
+.translit-section .transliteration {
+	font-family: monospace;
+	color: #c0392b;
+	font-size: 1.2em;
+}
 
-	.phonetics-section .phonetic {
-		color: #16a085;
-		font-style: italic;
-	}
+.phonetics-section .phonetic {
+	color: #16a085;
+	font-style: italic;
+}
 
-	.definition-section ol {
-		padding-left: 20px;
-		margin-top: 8px;
-	}
+.definition-section ol {
+	padding-left: 20px;
+	margin-top: 8px;
+}
 
-	.definition-section li {
-		margin-bottom: 6px;
-	}
+.definition-section li {
+	margin-bottom: 6px;
+}
 
-	.etymology-section .origin {
-		color: #2980b9;
-	}
+.etymology-section .origin {
+	color: #2980b9;
+}
 
-	.lexicon-section .entry {
-		font-family: monospace;
-		color: #7f8c8d;
-	}
+.lexicon-section .entry {
+	font-family: monospace;
+	color: #7f8c8d;
+}
 
-	.grammar-section .part-of-speech {
-		color: #e74c3c;
-		text-transform: uppercase;
-		font-size: 0.9em;
-		letter-spacing: 0.5px;
-	}
+.grammar-section .part-of-speech {
+	color: #e74c3c;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	letter-spacing: 0.5px;
+}
 
-	.strongs-def-section .strongs-def {
-		font-style: italic;
-    font-weight: 500;
-		color: #3E9B4F;
-		border-left: 3px solid #3E9B4F;
-		padding-left: 10px;
-	}
+.strongs-def-section .strongs-def {
+	font-style: italic;
+	font-weight: 500;
+	color: #3e9b4f;
+	border-left: 3px solid #3e9b4f;
+	padding-left: 10px;
+}
+
+.verse-container i {
+	font-style: italic; /* Styling for italicized text */
+}
+
+ol {
+	list-style-type: decimal;
+	list-style-position: inside;
+	/* padding-left: 20px; */
+}
+
+ol[type="a"] {
+	list-style-type: lower-alpha;
+	list-style-position: inside;
+	/* padding-left: 30px; */
+}
+
+li > ol {
+	padding: 5px 20px
+}
+
+/* textFit styles - important */
+.textFitAlignVert {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	/* causes overflow not to be seen */
+	/* margin: auto; */
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	/* Added by Me */
+	align-items: center;
+}
+.textFitAlignVertFlex {
+	display: flex;
+}
+.textFitAlignVertFlex .textFitAlignVert {
+	position: static;
+}
+
+.textFitted > * {
+	width: fit-content;
+	margin: 0 auto;
+}
 
 
-
-  .verse-container i {
-		font-style: italic; /* Styling for italicized text */
-	}
-
-    ol {
-        list-style-type: decimal;
-        padding-left: 20px;
-    }
-    
-    ol[type="a"] {
-        list-style-type: lower-alpha;
-        padding-left: 20px;
-    }
+.stable-text.heading {
+	--size-factor: (0.00188323 * 100vw);
+  font-size: calc(8 * var(--size-factor));
+}

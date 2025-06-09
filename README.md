@@ -30,3 +30,11 @@ Solid apps are built with _presets_, which optimise your project for deployment 
 By default, `npm run build` will generate a Node app that you can run with `npm start`. To use a different preset, add it to the `devDependencies` in `package.json` and specify in your `app.config.js`.
 
 ## This project was created with the [Solid CLI](https://github.com/solidjs-community/solid-cli)
+
+
+
+
+
+<!-- TODO -->
+Check H776, H6213 and other bigger definitions on big screen (Genesis 1:12, Genesis 1:7)
+Can fix it by dynamically setting a minfont when the projection personnel sees the font is too small (use bottombar menu controls)
